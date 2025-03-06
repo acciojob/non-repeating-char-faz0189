@@ -1,12 +1,15 @@
 function firstNonRepeatedChar(str) {
 
 	function firstNonRepeatedChar(str) {
+  function firstNonRepeatedChar(str) {
+  // Loop through each character in the string
   for (let i = 0; i < str.length; i++) {
-    if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
-      return str[i];
+    // Check if the character appears only once
+    if (str.split(str[i]).length - 1 === 1) {
+      return str[i]; // Return the first non-repeated character
     }
   }
-  return null;
+  return null; // Return null if no non-repeated character is found
 }
 
 // Example usage
